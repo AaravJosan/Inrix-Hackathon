@@ -1,0 +1,38 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folium Map</title>
+    <!-- Replace url_for with the actual path to your CSS file -->
+    <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+    <!-- Center the map container -->
+
+    <!-- Include Folium CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <div id = "text-input">
+    <h1>Text Input Form</h1>
+
+    <form method="post">
+        <label for="user_input">Enter Text:</label>
+        <input type="text" id="user_input1" name="user_input1" required>
+
+        <label for="user_input2">Enter Text:</label>
+        <input type="text" id="user_input2" name="user_input2" required>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <!-- Include your generated map HTML -->
+    {% if user_input %}
+        <p>You entered: {{ user_input1, user_input2 }}</p>
+    {% endif %}
+
+    {% include 'mymap.html' %}
+</body>
+</html>

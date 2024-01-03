@@ -1,0 +1,18 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#map-container {
+    width: 10px; /* or use any desired width */
+    height: 10px; /* or use any desired height */
+}
+
+#test-input {
+    z-index: 1;
+}
